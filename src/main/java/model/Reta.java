@@ -1,6 +1,6 @@
 package model;
 
-import java.text.DecimalFormat;
+import model.Ponto;
 
 public class Reta {
 

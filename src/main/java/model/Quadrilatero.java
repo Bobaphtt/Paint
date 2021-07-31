@@ -1,9 +1,6 @@
-package model.irregulares;
+package model;
 
-import model.FiguraGeometrica;
-import model.Reta;
-
-public class Quadrilatero extends FiguraGeometrica {
+public class Quadrilatero{
 
     private Reta um;
     private Reta dois;

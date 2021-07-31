@@ -3,13 +3,18 @@ package view;
 import java.util.Scanner;
 
 public class ImprimirMenus {
-    public void MenuPrincipal(){
-        Scanner sc = new Scanner(System.in);
+    public static void MenuPrincipal(){
+
+    }
+
+
+    public static void MenuRegular(){
         System.out.println("______________________________");
-        for (int i = 0; i < VetoresMenu.Menu.length; i++){
-            System.out.println(VetoresMenu.MenuLetra[i]+" - "+VetoresMenu.Menu[i]);
+        for (int i = 0; i < VetoresMenu.Regulares.length; i++){
+            System.out.println(i+" - "+VetoresMenu.Regulares[i]+"");
         }
         System.out.println("______________________________");
         System.out.print("ESCOLHA UMA OPÇÃO: ");
     }
+
 }
