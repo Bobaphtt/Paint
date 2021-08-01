@@ -12,7 +12,7 @@ public class Paint {
     private UserIO interacaoComUser = new UserIO();
 
     public Paint() {
-        vetor = new FiguraGeometrica[10];
+        vetor = new FiguraGeometrica[]{null, null, null, null, null, null, null, null, null, null};
         interacaoComUser = new UserIO();
     }
 
@@ -30,12 +30,13 @@ public class Paint {
 
     public void inicio() {
 
-        MENUPRINCIPAL op = interacaoComUser.MenuPrincipal();
+        interacaoComUser.bemVindo();
 
+        MENUPRINCIPAL op;
         do {
+            op = interacaoComUser.MenuPrincipal();
             FiguraGeometrica fig;
             interacaoComUser.ImprimeOpcaoMenu("" + op);
-
 
             switch (op) {
                 case CRIAR:
@@ -44,20 +45,29 @@ public class Paint {
                         case REGULAR:
                             fig = interacaoComUser.criaRegular();
                             insereFiguraGeometrica(fig);
+                            fig = null;
+                            break;
                         case RETANGULO:
                             fig = interacaoComUser.criaRetangulo();
                             insereFiguraGeometrica(fig);
+                            fig = null;
+                            break;
                         case SAIR:
-
                             break;
                         default:
                             break;
                     }
-                case APAGAR:
-
+                    break;
                 case LISTAR:
+                    interacaoComUser.listar(vetor);
+                    break;
+                case APAGAR:
+                    interacaoComUser.listar(vetor);
+                    vetor = interacaoComUser.apagar(vetor);
+                    break;
                 case DESENHAR:
                     interacaoComUser.triste();
+                    break;
                 case SAIR:
                     break;
             }

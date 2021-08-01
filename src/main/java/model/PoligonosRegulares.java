@@ -1,6 +1,6 @@
 package model;
 
-public class PoligonosRegulares extends FiguraGeometrica{
+public class PoligonosRegulares extends FiguraGeometrica {
 
     static final double[] TANGENTES = {0,
             0.0175,
@@ -98,35 +98,72 @@ public class PoligonosRegulares extends FiguraGeometrica{
     int valorAngulo;
     double apotema;
 
-    public PoligonosRegulares(int numeroDeLados, double tamanhoDoLado){
-        this.numeroDeLados = numeroDeLados;
+    public PoligonosRegulares(int lados, double tamanhoDoLado) {
+        this.numeroDeLados = lados;
         this.tamanhoDoLado = tamanhoDoLado;
+        if (lados == 3) {
+            calculaTriangulo(tamanhoDoLado);
+        } else if (lados == 4) {
+            calculaQuadrado(tamanhoDoLado);
+        } else if (lados == -1) {
+            calculaCircilo(tamanhoDoLado);
+        } else {
+            calculaGenerico(lados, tamanhoDoLado);
+        }
+    }
+
+    public void calculaGenerico(int numeroDeLados, double tamanhoDoLado) {
+        this.valorAngulo = (int)360/numeroDeLados;
+        this.apotema = (tamanhoDoLado / 2) / TANGENTES[this.valorAngulo];
+        this.perimetro = numeroDeLados * tamanhoDoLado;
+        this.area = (this.perimetro / 2) * this.apotema;
+    }
+
+    public void calculaQuadrado(double tamanhoDoLado) {
+        this.apotema = -1;
+        this.area = tamanhoDoLado * tamanhoDoLado;
         this.perimetro = numeroDeLados * tamanhoDoLado;
     }
 
-    public void calculaGenerico(int numeroDeLados, double tamanhoDoLado){
-
-        this.valorAngulo = (int)360/numeroDeLados;
-        this.apotema = (tamanhoDoLado/2) / TANGENTES[this.valorAngulo];
-        this.area = (this.perimetro/2) * this.apotema;
-    }
-
-    public void calculaQuadrado(double tamanhoDoLado){
+    public void calculaTriangulo(double tamanhoDoLado) {
         this.apotema = -1;
-        this.area = tamanhoDoLado*tamanhoDoLado;
+        this.area = ((tamanhoDoLado * tamanhoDoLado) * Math.sqrt(3)) / 4;
+        this.perimetro = numeroDeLados * tamanhoDoLado;
     }
 
-    public void calculaTriangulo(double tamanhoDoLado){
+    public void calculaCircilo(double raio) {
         this.apotema = -1;
-        this.area = ((tamanhoDoLado*tamanhoDoLado)*Math.sqrt(3))/4;
+        this.area = (raio * raio) * 3.14;
+        this.perimetro = 6.28 * raio;
     }
 
-    public double getArea(){
+    public double getArea() {
         return this.area;
     }
 
-    public double getPerimetro(){
+    public double getPerimetro() {
         return this.perimetro;
     }
 
+    @Override
+    public String toString() {
+        switch (this.numeroDeLados) {
+            case 3:
+                return "TRIANGULO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 4:
+                return "QUADRADO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 5:
+                return "PENTAGONO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 6:
+                return "HEXAGONO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 10:
+                return "DECAGONO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 12:
+                return "DODECAGONO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            case 20:
+                return "ICOSAGONO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+            default:
+                return "CIRCULO {AREA: " + area + " PERIMETRO: " + perimetro + "}";
+        }
+    }
 }
