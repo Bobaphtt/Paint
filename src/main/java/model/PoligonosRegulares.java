@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * PoligonosRegulares é uma classe que cria poligonos regulares, ou seja, poligonos que tem todos lados iguais.
+ * @
+ */
 public class PoligonosRegulares extends FiguraGeometrica {
 
     static final double[] TANGENTES = {0,
@@ -98,6 +102,12 @@ public class PoligonosRegulares extends FiguraGeometrica {
     int valorAngulo;
     double apotema;
 
+    /**
+     * Para criar um poligono relular você deve passar dois parametros:
+     * @param lados a quantidade de lados que o poligono tem, no caso de se querer criar um circulo, qualquer valor é aceito.
+     * @param tamanhoDoLado a medida de cada lado do poligono.
+     */
+
     public PoligonosRegulares(int lados, double tamanhoDoLado) {
         this.numeroDeLados = lados;
         this.tamanhoDoLado = tamanhoDoLado;
@@ -112,6 +122,11 @@ public class PoligonosRegulares extends FiguraGeometrica {
         }
     }
 
+    /**
+     * Esse método calcula a area, perimetro e apótema de qualquer poligono regular que não seja um triangulo, um quadrado ou circulo.
+     * @param numeroDeLados o numero de lados que o poligono tem.
+     * @param tamanhoDoLado a medida do lado do poligono.
+     */
     public void calculaGenerico(int numeroDeLados, double tamanhoDoLado) {
         this.valorAngulo = (int)360/numeroDeLados;
         this.apotema = (tamanhoDoLado / 2) / TANGENTES[this.valorAngulo];
@@ -119,32 +134,57 @@ public class PoligonosRegulares extends FiguraGeometrica {
         this.area = (this.perimetro / 2) * this.apotema;
     }
 
+    /**
+     * Esse método calcula a area e o perimetro do quadrado. Neste metodo não é necessario passar a quantidade de lados.
+     * @param tamanhoDoLado é o tamanho do lado do quadrado.
+     */
     public void calculaQuadrado(double tamanhoDoLado) {
         this.apotema = -1;
         this.area = tamanhoDoLado * tamanhoDoLado;
         this.perimetro = numeroDeLados * tamanhoDoLado;
     }
 
+    /**
+     * Esse método calcula a area e o perimetro do triangulo. Neste metodo não é necessario passar a quantidade de lados.
+     * @param tamanhoDoLado é o tamanho do lado do triangulo.
+     */
     public void calculaTriangulo(double tamanhoDoLado) {
         this.apotema = -1;
         this.area = ((tamanhoDoLado * tamanhoDoLado) * Math.sqrt(3)) / 4;
         this.perimetro = numeroDeLados * tamanhoDoLado;
     }
 
+    /**
+     * Esse método calcula a area e o perimetro do circulo. Como o circulo não tem lados, o necessário para calcular é o raio.
+     * @param raio é o tamanho do lado do circulo.
+     */
     public void calculaCircilo(double raio) {
         this.apotema = -1;
         this.area = (raio * raio) * 3.14;
         this.perimetro = 6.28 * raio;
     }
 
+    /**
+     * Retorna a AREA deste Objeto.
+     * @return AREA;
+     */
     public double getArea() {
         return this.area;
     }
 
+    /**
+     * Retorna o PERIMETRO deste Objeto.
+     * @return PERIMETRO;
+     */
     public double getPerimetro() {
         return this.perimetro;
     }
 
+
+    /**
+     * Retorna uma String com o tipo de poligono regular, em seguida a area e o perimetro.
+     * @return POLIGONO {AREA: " + area + " PERIMETRO: " + perimetro + "};
+     */
     @Override
     public String toString() {
         switch (this.numeroDeLados) {

@@ -7,7 +7,6 @@ import model.Quadrilatero;
 import model.enums.MENUPRINCIPAL;
 import model.enums.TIPOS;
 
-import javax.swing.table.TableRowSorter;
 import java.util.Scanner;
 
 public class UserIO {
