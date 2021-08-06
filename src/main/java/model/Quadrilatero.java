@@ -10,14 +10,10 @@ public class Quadrilatero extends FiguraGeometrica {
     private double altura;
 
     public Quadrilatero(double comprimento, double altura) {
-        Reta um = new Reta(new Ponto(0, 0), new Ponto(0.0, comprimento));
-        Reta dois = new Reta(new Ponto(0.0, comprimento), new Ponto(comprimento, altura));
-        Reta tres = new Reta(new Ponto(comprimento, altura), new Ponto(0, altura));
-        Reta quatro = new Reta(new Ponto(0, altura), new Ponto(0, 0));
-        this.um = um;
-        this.dois = dois;
-        this.tres = tres;
-        this.quatro = quatro;
+        this.um = new Reta(new Ponto(0, 0), new Ponto(0.0, comprimento));
+        this.dois = new Reta(new Ponto(0.0, comprimento), new Ponto(comprimento, altura));
+        this.tres = new Reta(new Ponto(comprimento, altura), new Ponto(0, altura));
+        this.quatro = new Reta(new Ponto(0, altura), new Ponto(0, 0));
         this.altura = altura;
         this.comprimento = comprimento;
         this.area = this.comprimento*this.altura;

@@ -138,6 +138,7 @@ public class PoligonosRegulares extends FiguraGeometrica {
      * Esse método calcula a area e o perimetro do quadrado. Neste metodo não é necessario passar a quantidade de lados.
      * @param tamanhoDoLado é o tamanho do lado do quadrado.
      */
+
     public void calculaQuadrado(double tamanhoDoLado) {
         this.apotema = -1;
         this.area = tamanhoDoLado * tamanhoDoLado;
