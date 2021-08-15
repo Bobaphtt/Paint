@@ -1,11 +1,15 @@
 package model;
 
 public abstract class FiguraGeometrica {
-    int numeroDeLados;
-    double area;
-    double perimetro;
 
-    public abstract double getArea();
+    protected double area;
+    protected double perimetro;
 
-    public abstract double getPerimetro();
+    public abstract void calcularArea();
+
+    public abstract void calcularPerimetro();
+
+    public abstract double mostrarArea();
+
+    public abstract double mostrarPerimetro();
 }

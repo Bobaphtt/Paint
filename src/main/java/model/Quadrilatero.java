@@ -10,8 +10,8 @@ public class Quadrilatero extends FiguraGeometrica {
     private double altura;
 
     public Quadrilatero(double comprimento, double altura) {
-        this.um = new Reta(new Ponto(0, 0), new Ponto(0.0, comprimento));
-        this.dois = new Reta(new Ponto(0.0, comprimento), new Ponto(comprimento, altura));
+        this.um = new Reta(new Ponto(0, 0), new Ponto(comprimento,0.0));
+        this.dois = new Reta(new Ponto(comprimento,0.0), new Ponto(comprimento, altura));
         this.tres = new Reta(new Ponto(comprimento, altura), new Ponto(0, altura));
         this.quatro = new Reta(new Ponto(0, altura), new Ponto(0, 0));
         this.altura = altura;
@@ -20,19 +20,32 @@ public class Quadrilatero extends FiguraGeometrica {
         this.perimetro = (2*comprimento) + (2*altura);
     }
 
-    @Override
-    public double getArea() {
-        return this.area;
+
+    //PERIMETROS
+    public double calcularPerimetro(double comprimento, int altura){
+        return (comprimento*2) + (altura*2);
     }
 
-    @Override
-    public double getPerimetro() {
+    public void calcularPerimetro(){
+        this.perimetro = (this.comprimento*2) + (this.altura*2);
+    }
+
+    public double mostrarPerimetro(){
         return this.perimetro;
     }
 
-    @Override
-    public String toString() {
-        return "QUADRILATERO {" +  "AREA: "+ this.area +" PERIMETRO: "+this.perimetro+"}";
+
+
+    //AREA
+    public double calcularArea(double comprimento, int altura){
+        return (comprimento*altura);
     }
 
+    public void calcularArea(){
+        this.area = this.comprimento*this.altura;
+    }
+
+    public double mostrarArea(){
+        return this.area;
+    }
 }
