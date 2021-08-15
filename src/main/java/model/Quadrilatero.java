@@ -18,6 +18,7 @@ public class Quadrilatero extends FiguraGeometrica {
         this.comprimento = comprimento;
         this.area = this.comprimento*this.altura;
         this.perimetro = (2*comprimento) + (2*altura);
+        this.tipo = 4;
     }
 
 

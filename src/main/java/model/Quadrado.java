@@ -15,6 +15,7 @@ public class Quadrado extends PoligonosRegulares {
         this.tres = new Reta(new Ponto(tamanhoDoLado, tamanhoDoLado), new Ponto(0, tamanhoDoLado));
         this.quatro = new Reta(new Ponto(0, tamanhoDoLado), new Ponto(0, 0));
         this.area = tamanhoDoLado*tamanhoDoLado;
+        this.tipo = 42;
     }
 
     @Override
@@ -32,4 +33,11 @@ public class Quadrado extends PoligonosRegulares {
         return this.area;
     }
 
+    @Override
+    public String toString() {
+        return "Quadrado{" +
+                "area=" + area +
+                ", perimetro=" + perimetro +
+                '}';
+    }
 }
