@@ -3,12 +3,12 @@ package view;
 import model.*;
 import model.enums.SUBMENUS;
 
-public class RetaMenu extends UserIO implements CRUD{
+public class CirculoMenu extends UserIO implements CRUD{
 
     public FiguraGeometrica criarFigura(){
-        double tamanhoLado = pedeDouble("QUAL O TAMANHO DA RETA? ");
-        System.out.println("SUA RETA FOI FEITA! ");
-        return new Reta(tamanhoLado);
+        double raio = pedeDouble("QUAL O RAIO DO CIRCULO? ");
+        System.out.println("SEU CIRCULO FOI FEITO! ");
+        return new Circulo(raio);
     }
 
     public FiguraGeometrica[] atualizarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
@@ -20,10 +20,10 @@ public class RetaMenu extends UserIO implements CRUD{
                 break;
             }
         }
-        double tamanhoLado = pedeDouble("QUAL O TAMANHO DA NOVA RETA? ");
+        double raio = pedeDouble("QUAL O RAIO DO NOVO CIRCULO? ? ");
         System.out.println("______________________________");
-        System.out.println("SUA OUTRA RETA FOI FEITA! ");
-        vetor[indice] = new Reta(tamanhoLado);
+        System.out.println("SEU OUTRO CIRCULO FOI FEITO! ");
+        vetor[indice] = new Circulo(raio);
         return vetor;
     }
 

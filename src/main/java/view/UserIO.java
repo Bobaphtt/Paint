@@ -1,6 +1,9 @@
 package view;
 
 
+import model.FiguraGeometrica;
+import model.enums.SUBMENUS;
+
 import java.util.Scanner;
 
 public class UserIO implements PaiInterface {
@@ -36,4 +39,41 @@ public class UserIO implements PaiInterface {
         return in.hasNextInt();
     }
 
+    //Utilidade
+
+    public FiguraGeometrica selecionaFigura(FiguraGeometrica[] vetor, SUBMENUS s){
+        for(int i = 0; i < vetor.length; i++){
+            System.out.println(i + " - " + vetor[i]);
+        }
+        int op = pedeInteiro("QUAL FIGURA VOCE QUER "+s+"?");
+        return vetor[op];
+    }
+
+    public FiguraGeometrica[] apagarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
+        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        int indice=0;
+        for (int i = 0; i <vetor.length;i++){
+            if(vetor[i] == fig){
+                indice = i;
+                break;
+            }
+        }
+        vetor[indice] = null;
+        return vetor;
+    }
+
+    public void mostrarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
+        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        System.out.println("______________________________");
+        System.out.println(fig);
+    }
+
+    public void listarFigura(FiguraGeometrica fig, FiguraGeometrica[] figs){
+        System.out.println("______________________________");
+        for (int i = 0; i < figs.length; i++){
+            if (figs[i].getTipo() == fig.getTipo()){
+                System.out.println(i +" - "+ figs[i]);
+            }
+        }
+    }
 }

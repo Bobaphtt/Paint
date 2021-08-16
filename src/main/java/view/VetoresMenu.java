@@ -17,10 +17,10 @@ public class VetoresMenu {
     };
 
     public static int[] MenuObjIndice = {
-            '1', '2', '3', '4', '5', '6', '7'
+            1, 2, 3, 4, 5, 6, 7
     };
 
     public static int[] MenuCadaFiguraIndice = {
-            '1', '2', '3', '4', '5', '6', '7'
+            1, 2, 3, 4, 5, 6, 7
     };
 }

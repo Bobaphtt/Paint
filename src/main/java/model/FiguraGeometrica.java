@@ -1,6 +1,8 @@
 package model;
 
-public abstract class FiguraGeometrica {
+import java.io.Serializable;
+
+public abstract class FiguraGeometrica implements Serializable{
 
     protected int tipo;
     protected double area;

@@ -1,50 +1,33 @@
 package view;
 
 import model.FiguraGeometrica;
+import model.Pentagono;
 import model.Quadrado;
+import model.Reta;
+import model.enums.SUBMENUS;
 
 public class QuadradoMenu extends UserIO implements CRUD{
 
     public FiguraGeometrica criarFigura(){
-        System.out.println("______________________________");
-        System.out.println("OK, UM QUADRADO! PARECE SER DEMAIS! ");
-        System.out.print("QUAL O TAMANHO DOS LADOS DO QUADRADO? ");
-        double tamanhoLado = pedeDouble("");
-        System.out.println("______________________________");
-        System.out.println("SEU QUADRADO FOI FEITO! OLHA, ELE TEM AS QUINAS PONTIAGUDAS CUIDADO O_O");
+        double tamanhoLado = pedeDouble("QUAL O TAMANHO DOS LADOS DO QUADRADO? ");
+        System.out.println("SEU QUADRADO FOI FEITO! ");
         return new Quadrado(tamanhoLado);
     }
 
-    public void mostrarFigura(FiguraGeometrica fig){
-        System.out.println("______________________________");
-        System.out.println(fig);
-    }
-
-    public FiguraGeometrica atualizarFigura(FiguraGeometrica fig){
-        System.out.println("______________________________");
-        System.out.println("AH, É AQUELE QUADRADO QUE EU TE DEI! ");
-        System.out.println("VOCÊ QUER TROCA-LO? SÓ ME DIZER COMO QUER OUTRO");
-        System.out.print("QUAL O TAMANHO DOS LADOS DO QUADRADO? ");
-        double tamanhoLado = pedeDouble("");
-        System.out.println("______________________________");
-        System.out.println("SEU QUADRADO FOI FEITO! ESPERO QUE GOSTE DELE DESSA VEZ");
-        return new Quadrado(tamanhoLado);
-    }
-
-    public void apagarFigura(FiguraGeometrica fig,  FiguraGeometrica[] figs){
-        listarFigura(fig,figs);
-        System.out.println("______________________________");
-        int indice = pedeInteiro("QUAL VOCÊ DESEJE APAGAR? ");
-        figs[indice] = null;
-    }
-
-    public void listarFigura(FiguraGeometrica fig, FiguraGeometrica[] figs){
-        System.out.println("______________________________");
-        for (int i = 0; i < figs.length; i++){
-            if (figs[i].getTipo() == fig.getTipo()){
-                System.out.println(i +" - "+ figs[i]);
+    public FiguraGeometrica[] atualizarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
+        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        int indice=0;
+        for (int i = 0; i <vetor.length;i++){
+            if(vetor[i] == fig){
+                indice = i;
+                break;
             }
         }
+        double tamanhoLado = pedeDouble("QUAL O TAMANHO DO NOVO QUADRADO? ");
+        System.out.println("______________________________");
+        System.out.println("SEU OUTRO QUADRADO FOI FEITO! ");
+        vetor[indice] = new Quadrado(tamanhoLado);
+        return vetor;
     }
 
 }

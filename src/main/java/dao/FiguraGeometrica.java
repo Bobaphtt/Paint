@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FiguraGeometrica {
 
-    public void salvarArquivo(FiguraGeometrica[] figs) {
+    public void salvarArquivo(model.FiguraGeometrica[] figs) {
         FileOutputStream arquivo = null;
         try {
             arquivo = new FileOutputStream("figurasGeometricas.dat");
@@ -18,13 +18,13 @@ public class FiguraGeometrica {
         System.out.println("Figuras Salvas");
     }
 
-    public FiguraGeometrica[] carregarArquivo() { //throws IOException, ClassNotFoundException{
-        FiguraGeometrica[] figs;
+    public model.FiguraGeometrica[] carregarArquivo() { //throws IOException, ClassNotFoundException{
+        model.FiguraGeometrica[] figs;
 
         try {
             FileInputStream arq = new FileInputStream("figurasGeometricas.dat");
             ObjectInputStream in = new ObjectInputStream(arq);
-            figs = (FiguraGeometrica[]) in.readObject();
+            figs = (model.FiguraGeometrica[]) in.readObject();
         } catch (IOException ex) {
             System.out.println("Ferrou IOExpection");
             ex.printStackTrace();
