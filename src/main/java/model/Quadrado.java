@@ -35,9 +35,6 @@ public class Quadrado extends PoligonosRegulares {
 
     @Override
     public String toString() {
-        return "Quadrado{" +
-                "area=" + area +
-                ", perimetro=" + perimetro +
-                '}';
+        return "QUADRADO";
     }
 }

@@ -49,4 +49,9 @@ public class Quadrilatero extends FiguraGeometrica {
     public double mostrarArea(){
         return this.area;
     }
+
+    @Override
+    public String toString() {
+        return "RETANGULO";
+    }
 }

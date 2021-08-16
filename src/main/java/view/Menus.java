@@ -29,8 +29,7 @@ public class Menus extends UserIO {
             System.out.println(VetoresMenu.MenuIndice[i] + " - " + VetoresMenu.Menu[i]);
         }
         System.out.println("______________________________");
-        System.out.print("ESCOLHA UMA OPÇÃO: ");
-        char op = pedeChar();
+        char op = pedeChar("ESCOLHA UMA OPÇÃO: ");
 
         switch (op) {
             case '1':
@@ -80,8 +79,7 @@ public class Menus extends UserIO {
             System.out.println(VetoresMenu.MenuCadaFiguraIndice[i] + " - " + VetoresMenu.MenuCadaFigura[i]);
         }
         System.out.println("______________________________");
-        System.out.print("ESCOLHA UMA OPÇÃO: ");
-        char op = pedeChar();
+        char op = pedeChar("ESCOLHA UMA OPÇÃO: ");
 
         switch (op) {
             case '1' -> {
@@ -126,7 +124,7 @@ public class Menus extends UserIO {
         boolean vazio = true;
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] != null) {
-                System.out.println(i + " - " + vetor[i]);
+                System.out.println(i +" - "+ vetor[i]+ "{AREA: "+vetor[i].mostrarArea() + "- PERIMETRO: "+vetor[i].mostrarPerimetro()+"}");
                 vazio = false;
             }
         }

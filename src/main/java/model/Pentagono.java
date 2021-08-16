@@ -33,5 +33,8 @@ public class Pentagono extends PoligonosRegulares{
         return this.area;
     }
 
-
+    @Override
+    public String toString() {
+        return "PENTAGONO";
+    }
 }

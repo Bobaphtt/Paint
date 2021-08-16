@@ -34,5 +34,8 @@ public class Hexagono extends PoligonosRegulares{
     public double mostrarArea(){
         return this.area;
     }
-
+    @Override
+    public String toString() {
+        return "HEXAGONO";
+    }
 }

@@ -44,9 +44,6 @@ public class Ponto extends FiguraGeometrica{
 
     @Override
     public String toString() {
-        return "Ponto{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "PONTO";
     }
 }

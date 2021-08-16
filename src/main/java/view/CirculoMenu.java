@@ -5,6 +5,13 @@ import model.enums.SUBMENUS;
 
 public class CirculoMenu extends UserIO implements CRUD{
 
+
+    private Circulo generic;
+
+    public CirculoMenu(){
+        generic = new Circulo(0);
+    }
+
     public FiguraGeometrica criarFigura(){
         double raio = pedeDouble("QUAL O RAIO DO CIRCULO? ");
         System.out.println("SEU CIRCULO FOI FEITO! ");
@@ -12,7 +19,7 @@ public class CirculoMenu extends UserIO implements CRUD{
     }
 
     public FiguraGeometrica[] atualizarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
-        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        FiguraGeometrica fig = selecionaFigura( generic.getTipo(), vetor, s);
         int indice=0;
         for (int i = 0; i <vetor.length;i++){
             if(vetor[i] == fig){

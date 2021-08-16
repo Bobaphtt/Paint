@@ -38,9 +38,6 @@ public class Reta extends FiguraGeometrica{
 
     @Override
     public String toString() {
-        return "Reta{" +
-                "a=" + a +
-                ", b=" + b +
-                '}';
+        return "RETA";
     }
 }

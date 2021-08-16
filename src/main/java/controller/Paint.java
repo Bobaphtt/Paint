@@ -55,10 +55,10 @@ public class Paint {
                             rm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            rm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            rm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            rm.apagarFigura(vetor, SUBMENUS.EXCLUIR);
+                            rm.apagarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }
@@ -77,10 +77,10 @@ public class Paint {
                             cm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.EXCLUIR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }
@@ -99,10 +99,10 @@ public class Paint {
                             cm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.EXCLUIR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }
@@ -121,10 +121,10 @@ public class Paint {
                             cm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.EXCLUIR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }
@@ -143,10 +143,10 @@ public class Paint {
                             cm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.EXCLUIR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }
@@ -165,10 +165,10 @@ public class Paint {
                             cm.atualizarFigura(vetor, SUBMENUS.EDITAR);
                         }
                         case MOSTRAR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.MOSTRAR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.MOSTRAR);
                         }
                         case EXCLUIR -> {
-                            cm.mostrarFigura(vetor, SUBMENUS.EXCLUIR);
+                            cm.mostrarFigura(generic.getTipo(),vetor, SUBMENUS.EXCLUIR);
                         }
                     }
                 }

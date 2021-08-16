@@ -6,6 +6,8 @@ public class Circulo extends FiguraGeometrica{
 
     public Circulo(double raio){
         this.raio = raio;
+        this.area = 3.14*raio*raio;
+        this.perimetro  = 3.14*raio*2;
     }
 
     public void calcularArea(){
@@ -26,6 +28,6 @@ public class Circulo extends FiguraGeometrica{
 
     @Override
     public String toString(){
-        return "Circulo";
+        return "CIRCULO";
     }
 }

@@ -5,6 +5,13 @@ import model.enums.SUBMENUS;
 
 public class RetaMenu extends UserIO implements CRUD{
 
+    private Reta generic;
+
+    public RetaMenu(){
+        generic = new Reta(0);
+    }
+
+
     public FiguraGeometrica criarFigura(){
         double tamanhoLado = pedeDouble("QUAL O TAMANHO DA RETA? ");
         System.out.println("SUA RETA FOI FEITA! ");
@@ -12,7 +19,7 @@ public class RetaMenu extends UserIO implements CRUD{
     }
 
     public FiguraGeometrica[] atualizarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
-        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        FiguraGeometrica fig = selecionaFigura(generic.getTipo(), vetor, s);
         int indice=0;
         for (int i = 0; i <vetor.length;i++){
             if(vetor[i] == fig){

@@ -15,7 +15,7 @@ public class FiguraGeometrica {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Figuras Salvas");
+        System.out.println("SUAS FIGURAS FORAM SALVAS");
     }
 
     public model.FiguraGeometrica[] carregarArquivo() { //throws IOException, ClassNotFoundException{
@@ -26,15 +26,15 @@ public class FiguraGeometrica {
             ObjectInputStream in = new ObjectInputStream(arq);
             figs = (model.FiguraGeometrica[]) in.readObject();
         } catch (IOException ex) {
-            System.out.println("Ferrou IOExpection");
+            System.out.println("ERRO NA LEITURA DE ARQUIVO");
             ex.printStackTrace();
             return null;
         } catch (ClassNotFoundException ex) {
-            System.out.println("Ferrou Class");
+            System.out.println("ERRO CLASSE NAO ENCONTRADA");
             ex.printStackTrace();
             return null;
         } catch (Exception ex) {
-            System.out.println("Ferrou Tudo");
+            System.out.println("ERRO DESCONHECIDO");
             ex.printStackTrace();
             return null;
         }

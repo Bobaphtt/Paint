@@ -5,6 +5,12 @@ import model.enums.SUBMENUS;
 
 public class QuadrilateroMenu extends UserIO implements CRUD{
 
+    private Quadrilatero generic;
+
+    public QuadrilateroMenu(){
+        generic = new Quadrilatero(0,0);
+    }
+
     public FiguraGeometrica criarFigura(){
         double comprimento = pedeDouble("QUAL O COMPRIMENTO DO QUADRILATERO? ");
         double altura = pedeDouble("QUAL A ALTURA DO QUADRILATERO? ");
@@ -13,7 +19,7 @@ public class QuadrilateroMenu extends UserIO implements CRUD{
     }
 
     public FiguraGeometrica[] atualizarFigura(FiguraGeometrica[] vetor, SUBMENUS s){
-        FiguraGeometrica fig = selecionaFigura(vetor, s);
+        FiguraGeometrica fig = selecionaFigura(generic.getTipo(), vetor, s);
         int indice=0;
         for (int i = 0; i <vetor.length;i++){
             if(vetor[i] == fig){
