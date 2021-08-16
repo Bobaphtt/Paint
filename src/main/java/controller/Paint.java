@@ -21,7 +21,7 @@ public class Paint {
             }
         }
         if (adicionado){
-            System.out.println("SEM ESPAÇO");
+            System.out.println("SEM ESPAÇO PARA ADICIONAR OUTRA FIGURA");
         }
     }
 
