@@ -3,6 +3,7 @@ package controller;
 import model.*;
 import model.enums.*;
 import view.*;
+import view.cli.*;
 
 
 public class Paint {
@@ -182,7 +183,7 @@ public class Paint {
                     dao.salvarArquivo(vetor);
                 }
                 case DESENHAR -> {
-                    menus.desenhar();
+                    menus.desenhar(vetor);
                 }
                 default -> {
                     opcao = MENUPRINCIPAL.SAIR;

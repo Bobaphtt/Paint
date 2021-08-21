@@ -1,9 +1,10 @@
-package view;
+package view.cli;
 
 import model.*;
 import model.enums.SUBMENUS;
+import view.CRUD;
 
-public class QuadradoMenu extends UserIO implements CRUD{
+public class QuadradoMenu extends FigurasMenuGeral implements CRUD {
 
 
     private Quadrado generic;

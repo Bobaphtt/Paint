@@ -1,10 +1,10 @@
 package view;
 
 import model.FiguraGeometrica;
-import model.PoligonosRegulares;
-import model.Quadrilatero;
 import model.enums.MENUPRINCIPAL;
 import model.enums.SUBMENUS;
+import view.cli.UserIO;
+import view.gui.DesenhoGrafico;
 
 public class Menus extends UserIO {
 
@@ -115,9 +115,11 @@ public class Menus extends UserIO {
         System.out.println("______________________________");
     }
 
-    public void desenhar() {
+    public void desenhar(FiguraGeometrica[] f) {
         System.out.println("OLHA, EU AINDA NÃO TENHO LÁPIS PRA DESENHAR :(");
         System.out.println("MAS O LUAN DISSE QUE IA CONSTRUIR UM PARA MIM! ");
+        DesenhoGrafico dg = new DesenhoGrafico();
+        dg.desenhar(f);
     }
 
    public void listar(FiguraGeometrica[] vetor) {

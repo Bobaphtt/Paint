@@ -1,9 +1,10 @@
-package view;
+package view.cli;
 
 import model.*;
 import model.enums.SUBMENUS;
+import view.CRUD;
 
-public class RetaMenu extends UserIO implements CRUD{
+public class RetaMenu extends FigurasMenuGeral implements CRUD {
 
     private Reta generic;
 

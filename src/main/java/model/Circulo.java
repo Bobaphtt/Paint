@@ -10,12 +10,16 @@ public class Circulo extends FiguraGeometrica{
         this.perimetro  = 3.14*raio*2;
     }
 
+    public double getRaio() {
+        return raio;
+    }
+
     public void calcularArea(){
         this.area = 3.14*raio*raio;
     }
 
     public void calcularPerimetro(){
-        this.area = 3.14*raio*2;
+        this.perimetro = 3.14*raio*2;
     }
 
     public double mostrarArea(){

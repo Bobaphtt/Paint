@@ -35,7 +35,13 @@ public class Quadrilatero extends FiguraGeometrica {
         return this.perimetro;
     }
 
+    public double getAltura() {
+        return altura;
+    }
 
+    public double getComprimento() {
+        return comprimento;
+    }
 
     //AREA
     public double calcularArea(double comprimento, int altura){

@@ -1,9 +1,10 @@
-package view;
+package view.cli;
 
 import model.*;
 import model.enums.SUBMENUS;
+import view.CRUD;
 
-public class PentagonoMenu extends UserIO implements CRUD{
+public class PentagonoMenu extends FigurasMenuGeral implements CRUD {
 
 
     private Pentagono generic;

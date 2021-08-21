@@ -1,9 +1,10 @@
-package view;
+package view.cli;
 
 import model.*;
 import model.enums.SUBMENUS;
+import view.CRUD;
 
-public class HexagonoMenu extends UserIO implements CRUD{
+public class HexagonoMenu extends FigurasMenuGeral implements CRUD {
 
     private Hexagono generic;
 

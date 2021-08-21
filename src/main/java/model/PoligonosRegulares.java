@@ -33,4 +33,7 @@ public class PoligonosRegulares extends FiguraGeometrica {
         return this.area;
     }
 
+    public double getTamanhoDoLado() {
+        return tamanhoDoLado;
+    }
 }

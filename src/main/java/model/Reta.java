@@ -24,6 +24,10 @@ public class Reta extends FiguraGeometrica{
         this.tamanho = tamanho;
     }
 
+    public double getTamanho() {
+        return tamanho;
+    }
+
     public void calcularArea(){}
 
     public void calcularPerimetro(){}
