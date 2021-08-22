@@ -12,7 +12,7 @@ public class DesenhoGrafico {
     private void criarEMostrarBoard(model.FiguraGeometrica[] figs) {
         System.out.println("Log que Criou a tela? " +
                 SwingUtilities.isEventDispatchThread());
-        JFrame f = new JFrame("Teste de Desenhos");
+        JFrame f = new JFrame("Paintex 5000 Pro Ultra");
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.add(new PainelDeDesenho(figs));
         f.setSize(1230, 720);
