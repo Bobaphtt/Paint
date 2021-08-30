@@ -21,11 +21,6 @@ public class Hexagono extends PoligonosRegulares{
     }
 
     @Override
-    public void calcularArea(){
-        this.area = this.tamanhoDoLado*this.tamanhoDoLado;
-    }
-
-    @Override
     public double mostrarPerimetro(){
         return this.perimetro;
     }

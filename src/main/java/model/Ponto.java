@@ -14,15 +14,6 @@ public class Ponto extends FiguraGeometrica{
         this.y = 0;
     }
 
-    @Override
-    public void calcularArea() {
-
-    }
-
-    @Override
-    public void calcularPerimetro() {
-
-    }
 
     @Override
     public double mostrarArea() {

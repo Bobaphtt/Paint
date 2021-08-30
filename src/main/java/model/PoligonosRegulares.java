@@ -17,14 +17,6 @@ public class PoligonosRegulares extends FiguraGeometrica {
 
     public PoligonosRegulares(){}
 
-    public void calcularPerimetro(){
-        this.perimetro = this.tamanhoDoLado*this.numeroDeLados;
-    }
-
-    public void calcularArea(){
-        this.area = -1;
-    }
-
     public double mostrarPerimetro(){
         return this.perimetro;
     }

@@ -23,13 +23,6 @@ public class Quadrilatero extends FiguraGeometrica {
 
 
     //PERIMETROS
-    public double calcularPerimetro(double comprimento, int altura){
-        return (comprimento*2) + (altura*2);
-    }
-
-    public void calcularPerimetro(){
-        this.perimetro = (this.comprimento*2) + (this.altura*2);
-    }
 
     public double mostrarPerimetro(){
         return this.perimetro;

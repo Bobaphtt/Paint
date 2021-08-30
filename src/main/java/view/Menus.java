@@ -116,8 +116,7 @@ public class Menus extends UserIO {
     }
 
     public void desenhar(FiguraGeometrica[] f) {
-        System.out.println("OLHA, EU AINDA NÃO TENHO LÁPIS PRA DESENHAR :(");
-        System.out.println("MAS O LUAN DISSE QUE IA CONSTRUIR UM PARA MIM! ");
+        System.out.println("DESENHANDO!");
         DesenhoGrafico dg = new DesenhoGrafico();
         dg.desenhar(f);
     }
