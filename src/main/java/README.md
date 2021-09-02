@@ -112,6 +112,7 @@ Do seu protótipo até esta etapa você acabou fazendo uso de comportamentos Pol
 >
 >![](diagrama.png)
 > 
+> 
 > <h2>Controllers, Views e ENUMS</h2>
 > 
 > Essa é a parte de funcionamento do programa de fato, que o programa pergunta coisas ao usuário, faz seus calculos armazena os dados, mostra o resultado
@@ -134,6 +135,8 @@ Do seu protótipo até esta etapa você acabou fazendo uso de comportamentos Pol
 > Esse quadrado é guardado num vetor de figuras.
 > 
 > A comunicação entre os Controllers e View é feito por meio de ENUMS.
+> 
+> ![](diagrama2.jpg)
 > 
 > <h2>Arquivo</h2>
 > 
