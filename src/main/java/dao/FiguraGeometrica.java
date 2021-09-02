@@ -22,7 +22,7 @@ public class FiguraGeometrica {
         model.FiguraGeometrica[] figs;
 
         try {
-            FileInputStream arq = new FileInputStream("figurasGeometricas.dat");
+            FileInputStream arq = new FileInputStream("arquivo.dat");
             ObjectInputStream in = new ObjectInputStream(arq);
             figs = (model.FiguraGeometrica[]) in.readObject();
         } catch (IOException ex) {
