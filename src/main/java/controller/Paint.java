@@ -35,6 +35,7 @@ public class Paint {
     public void inicio() {
         MENUPRINCIPAL opcao;
         do {
+            menus.bemVindo();
             opcao = menus.MenuPrincipal();
             switch (opcao){
                 case PONTO -> {

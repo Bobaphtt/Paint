@@ -7,7 +7,7 @@ public class FiguraGeometrica {
     public void salvarArquivo(model.FiguraGeometrica[] figs) {
         FileOutputStream arquivo = null;
         try {
-            arquivo = new FileOutputStream("figurasGeometricas.dat");
+            arquivo = new FileOutputStream("arquivo.dat");
             ObjectOutputStream out = new ObjectOutputStream(arquivo);
             out.writeObject(figs);
         } catch (FileNotFoundException e) {

@@ -151,7 +151,7 @@ public class DesenhoGrafico {
                         double multiplicador = 1;
 
 
-                        if (((Hexagono) f).getTamanhoDoLado() < 25) {
+                        if (((Hexagono) f).getTamanhoDoLado() < 27) {
                             multiplicador = 0.1;
                         } else if (((Hexagono) f).getTamanhoDoLado() < 54) {
                             multiplicador = 0.2;

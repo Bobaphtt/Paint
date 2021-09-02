@@ -17,7 +17,6 @@ public class Quadrado extends PoligonosRegulares {
         this.area = tamanhoDoLado*tamanhoDoLado;
         this.tipo = 42;
     }
-
     @Override
     public double mostrarPerimetro(){
         return this.perimetro;

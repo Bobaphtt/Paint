@@ -13,8 +13,8 @@ public class QuadrilateroMenu extends FigurasMenuGeral implements CRUD {
     }
 
     public FiguraGeometrica criarFigura(){
-        double comprimento = pedeDouble("QUAL O COMPRIMENTO DO QUADRILATERO? ");
-        double altura = pedeDouble("QUAL A ALTURA DO QUADRILATERO? ");
+        double comprimento = pedeDouble("QUAL O ALTURA DO QUADRILATERO? ");
+        double altura = pedeDouble("QUAL A COMPRIMENTO DO QUADRILATERO? ");
 
         return new Quadrilatero(comprimento, altura);
     }
